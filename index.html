@@ -3,64 +3,56 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex, nofollow">
-<title>Aron Lazarchick — Technical sales for the digital grid</title>
-<meta name="description" content="Technical sales for grid-edge and DER integration software. Eight years in the European energy transition, based in Portugal.">
+<title>Grid-Scale Growth for Grid-Edge Tech | gridtechGTM</title>
+<meta name="description" content="GTM built for the utility buyer. Protocol-deep positioning, signal-tracked pipeline and RFP-winning execution for DERMS, VPP, grid-edge and eMobility companies.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'><circle cx='14' cy='14' r='12' fill='%2314181F'/><path d='M 6 14 L 11 14 L 13 8 L 15 20 L 17 14 L 22 14' stroke='%23E8B547' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'><rect width='28' height='28' rx='6' fill='%23000'/><path d='M 6 14 L 11 14 L 13 8 L 15 20 L 17 14 L 22 14' stroke='%23FFD60A' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
 
 <style>
 /* =================================================================
-   GRIDTECHGTM · PRINCIPAL — Viable Planet design system
+   GRIDTECHGTM — after cleantechgrowthlab.com
+   Black canvas · Satoshi · Instrument Serif italics · HV yellow
    ================================================================= */
 
 :root {
-  --bg:        #14181F;
-  --bg-2:      #1A1F2E;
-  --bg-3:      #232A3B;
-  --line:      rgba(245,241,232,0.08);
-  --line-2:    rgba(245,241,232,0.16);
-  --line-3:    rgba(245,241,232,0.28);
+  --bg:        #000000;
+  --text:      rgba(255,255,255,0.95);
+  --text-2:    rgba(255,255,255,0.62);
+  --text-3:    rgba(255,255,255,0.40);
+  --border:    rgba(255,255,255,0.10);
+  --border-2:  rgba(255,255,255,0.18);
+  --surface:   rgba(255,255,255,0.04);
+  --surface-2: rgba(255,255,255,0.07);
 
-  --ink:       #F5F1E8;
-  --ink-2:     #C9C4B8;
-  --ink-3:     #8B8678;
+  --primary:    #FFD60A;   /* hi-voltage yellow */
+  --primary-2:  #FFE23D;
+  --primary-dim:#B89A00;
+  --primary-5:  rgba(255,214,10,0.05);
+  --primary-10: rgba(255,214,10,0.10);
+  --primary-20: rgba(255,214,10,0.22);
 
-  --amber:     #E8B547;
-  --amber-2:   #F4C766;
-  --amber-dim: #B68A2F;
-  --teal:      #5FB8A8;
-  --teal-2:    #7DCFBF;
-  --teal-dim:  #3F8C7E;
+  --sans:  'Satoshi', 'Inter', system-ui, sans-serif;
+  --serif: 'Instrument Serif', 'Times New Roman', serif;
 
-  --glass-bg:  rgba(245,241,232,0.04);
-  --glass-bg-2: rgba(245,241,232,0.07);
-  --glass-border: rgba(245,241,232,0.12);
-  --glass-border-2: rgba(245,241,232,0.18);
-
-  --radius-sm: 6px;
-  --radius:    14px;
-  --radius-lg: 22px;
-  --radius-pill: 999px;
-
-  --sans:  'Geist', system-ui, sans-serif;
-  --mono:  'Geist Mono', ui-monospace, monospace;
-
-  --maxw: 1140px;
-  --gutter: clamp(20px, 4vw, 56px);
+  --maxw: 1200px;
+  --maxw-m: 900px;
+  --gutter: clamp(20px, 4vw, 48px);
+  --r: 12px;
+  --r-lg: 20px;
+  --r-pill: 100px;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
 html { scroll-behavior: smooth; }
 
 body {
   background: var(--bg);
-  color: var(--ink);
+  color: var(--text);
   font-family: var(--sans);
   font-weight: 400;
   font-size: 16px;
@@ -70,669 +62,674 @@ body {
   overflow-x: hidden;
 }
 
-::selection { background: var(--amber); color: var(--bg); }
-
+::selection { background: var(--primary); color: #000; }
 a { color: inherit; text-decoration: none; }
 
-/* Global atmosphere — soft glow + grain */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background:
-    radial-gradient(ellipse at 12% 8%, rgba(232,181,71,0.10) 0%, transparent 45%),
-    radial-gradient(ellipse at 88% 92%, rgba(95,184,168,0.07) 0%, transparent 50%);
-  pointer-events: none;
-  z-index: 0;
-}
+.wrap   { max-width: var(--maxw);   margin: 0 auto; padding: 0 var(--gutter); }
+.wrap-m { max-width: var(--maxw-m); margin: 0 auto; padding: 0 var(--gutter); }
 
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.92' numOctaves='2'/><feColorMatrix values='0 0 0 0 0.96  0 0 0 0 0.94  0 0 0 0 0.91  0 0 0 0.04 0'/></filter><rect width='220' height='220' filter='url(%23n)'/></svg>");
-  opacity: 0.5;
-  mix-blend-mode: overlay;
-  pointer-events: none;
-  z-index: 1;
+em.serif {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
 }
-
-main, header, footer, nav, .nav-wrap { position: relative; z-index: 2; }
 
 /* =================================================================
-   NAV — glass pill
+   NAV
    ================================================================= */
 
-.nav-wrap {
+.navbar {
   position: fixed;
-  top: 18px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100% - 32px);
-  max-width: 1000px;
-  z-index: 100;
+  top: 0; left: 0; right: 0;
+  z-index: 999;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
 }
 
-.nav {
+.nav-in {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  height: 68px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 14px 10px 18px;
-  background: rgba(20,24,31,0.55);
-  backdrop-filter: blur(20px) saturate(140%);
-  -webkit-backdrop-filter: blur(20px) saturate(140%);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-pill);
-  box-shadow:
-    0 1px 0 0 rgba(245,241,232,0.06) inset,
-    0 18px 40px -18px rgba(0,0,0,0.55);
+  gap: 24px;
 }
 
-.brand {
+.logo {
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: -0.02em;
   display: flex;
   align-items: center;
   gap: 10px;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  font-size: 15px;
 }
-
-.brand-name { color: var(--ink); }
-.brand-slash { color: var(--ink-3); margin: 0 1px; font-weight: 300; }
-.brand-tag { color: var(--ink-2); font-weight: 400; font-size: 13.5px; }
-
-.brand-hz {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  color: var(--ink-3);
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-left: 8px;
-}
-.brand-hz .dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--teal);
-  box-shadow: 0 0 8px var(--teal);
-  animation: livepulse 2.4s ease-in-out infinite;
-}
+.logo svg { display: block; }
+.logo .accent { color: var(--primary); }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
 }
-
 .nav-link {
   padding: 8px 14px;
-  font-size: 14px;
-  color: var(--ink-2);
-  border-radius: var(--radius-pill);
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--text-2);
+  border-radius: var(--r-pill);
   transition: color 160ms ease, background 160ms ease;
 }
-.nav-link:hover { color: var(--ink); background: var(--glass-bg); }
+.nav-link:hover { color: var(--text); background: var(--surface); }
 
-.nav-cta {
-  margin-left: 6px;
-  padding: 9px 16px;
-  background: var(--amber);
-  color: var(--bg);
-  font-weight: 500;
-  font-size: 14px;
-  border-radius: var(--radius-pill);
-  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: var(--r-pill);
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease, border-color 180ms ease, color 180ms ease;
 }
-.nav-cta:hover {
-  background: var(--amber-2);
-  box-shadow: 0 8px 24px -6px rgba(232,181,71,0.5);
+.btn-primary { background: var(--primary); color: #000; }
+.btn-primary:hover {
+  background: var(--primary-2);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 32px -10px rgba(255,214,10,0.45);
 }
+.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border-2);
+}
+.btn-secondary:hover { border-color: var(--text-3); background: var(--surface); }
+.btn-nav { padding: 10px 20px; font-size: 14px; }
 
-@media (max-width: 760px) {
-  .nav .brand-tag, .nav .brand-slash, .nav .brand-hz { display: none; }
+@media (max-width: 860px) {
   .nav-links .nav-link { display: none; }
 }
 
 /* =================================================================
-   TYPOGRAPHY
+   SECTION PRIMITIVES
    ================================================================= */
 
-.eyebrow {
-  font-family: var(--mono);
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--amber);
+section { position: relative; }
+.sec-pad { padding: clamp(72px, 9vw, 128px) 0; }
+
+.tag {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  padding: 6px 14px;
+  border: 1px solid var(--border-2);
+  border-radius: var(--r-pill);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-2);
+  background: var(--surface);
+  margin-bottom: 24px;
 }
-.eyebrow::before {
+.tag::before {
   content: '';
-  width: 18px;
-  height: 1px;
-  background: currentColor;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, var(--primary), #ff9d0a, var(--primary));
+  animation: spin 5s linear infinite;
 }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+h2 {
+  font-weight: 500;
+  font-size: clamp(30px, 4.4vw, 52px);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+}
+h2 em.serif, h1 em.serif { font-size: 1.04em; }
+
+.lede {
+  margin-top: 22px;
+  font-size: clamp(16px, 1.4vw, 18px);
+  line-height: 1.65;
+  color: var(--text-2);
+  max-width: 62ch;
+}
+.lede strong { color: var(--text); font-weight: 500; }
+
+.center { text-align: center; }
+.center .lede { margin-left: auto; margin-right: auto; }
 
 /* =================================================================
-   HERO — glass card over atmosphere
+   HERO — glow grid + testimonial callout + stats
    ================================================================= */
 
 .hero {
-  min-height: 88vh;
-  display: flex;
-  align-items: center;
-  padding: 160px var(--gutter) 100px;
+  padding: 150px 0 0;
   position: relative;
   overflow: hidden;
 }
 
-.hero .sun {
+/* glowing grid backdrop */
+.hero-glow {
   position: absolute;
-  top: 18%;
-  right: 8%;
-  width: 560px;
-  height: 560px;
-  background: radial-gradient(circle, rgba(232,181,71,0.16) 0%, rgba(232,181,71,0.05) 40%, transparent 65%);
-  border-radius: 50%;
-  filter: blur(30px);
+  inset: 0;
+  z-index: 0;
   pointer-events: none;
+}
+.hero-glow .grid-lines {
+  position: absolute;
+  left: 50%;
+  top: 110px;
+  transform: translateX(-50%);
+  width: min(1100px, 96vw);
+  height: 620px;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.09) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.09) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(ellipse 55% 55% at 50% 42%, #000 30%, transparent 75%);
+          mask-image: radial-gradient(ellipse 55% 55% at 50% 42%, #000 30%, transparent 75%);
+}
+.hero-glow .glow-a,
+.hero-glow .glow-b {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
   mix-blend-mode: screen;
-  animation: sunPulse 8s ease-in-out infinite;
+}
+.hero-glow .glow-a {
+  width: 620px; height: 420px;
+  left: 50%; top: 90px;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse, rgba(255,214,10,0.20) 0%, rgba(255,157,10,0.08) 45%, transparent 70%);
+  animation: breathe 7s ease-in-out infinite;
+}
+.hero-glow .glow-b {
+  width: 300px; height: 220px;
+  left: 50%; top: 180px;
+  transform: translateX(-30%);
+  background: radial-gradient(ellipse, rgba(255,255,255,0.10) 0%, transparent 70%);
+  animation: breathe 9s 1s ease-in-out infinite;
+}
+@keyframes breathe {
+  0%, 100% { opacity: 0.85; }
+  50%      { opacity: 1; }
 }
 
-@keyframes sunPulse {
-  0%, 100% { opacity: 0.8; transform: scale(1); }
-  50%      { opacity: 1;   transform: scale(1.08); }
-}
-
-.hero-inner {
-  width: 100%;
-  max-width: var(--maxw);
-  margin: 0 auto;
+.hero-in {
   position: relative;
-  z-index: 2;
+  z-index: 1;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  text-align: center;
 }
 
-.hero-card {
-  background: linear-gradient(135deg, rgba(245,241,232,0.06), rgba(245,241,232,0.02));
-  backdrop-filter: blur(24px) saturate(140%);
-  -webkit-backdrop-filter: blur(24px) saturate(140%);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-lg);
-  padding: clamp(28px, 4.5vw, 56px);
-  box-shadow:
-    0 1px 0 rgba(245,241,232,0.08) inset,
-    0 30px 60px -30px rgba(0,0,0,0.6);
-  animation: heroIn 900ms 100ms ease-out both;
-  max-width: 680px;
+/* callout chip above H1 */
+.hero-callout {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 18px 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-pill);
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(8px);
+  margin-bottom: 34px;
 }
+.hero-callout .pulse {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--primary-10);
+  border: 1px solid var(--primary-20);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-callout .pulse::after {
+  content: '';
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--primary);
+  animation: pulsedot 2.2s ease-in-out infinite;
+}
+@keyframes pulsedot { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+.hero-callout .co-main { font-size: 14px; font-weight: 500; }
+.hero-callout .co-sub { font-size: 12.5px; color: var(--text-3); }
 
-.hero h1 {
+h1 {
   font-weight: 500;
-  font-size: clamp(38px, 5.6vw, 68px);
+  font-size: clamp(40px, 6.6vw, 78px);
   line-height: 1.02;
-  letter-spacing: -0.025em;
-  color: var(--ink);
-  margin: 22px 0 18px;
-}
-
-.hero h1 em {
-  font-style: normal;
-  background: linear-gradient(180deg, var(--amber), #D9A23A);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.035em;
 }
 
 .hero-sub {
-  font-size: clamp(16px, 1.4vw, 19px);
+  margin: 26px auto 0;
+  font-size: clamp(16px, 1.5vw, 19px);
   line-height: 1.6;
-  color: var(--ink-2);
-  max-width: 56ch;
-  margin-bottom: 32px;
+  color: var(--text-2);
+  max-width: 54ch;
 }
-.hero-sub strong { color: var(--ink); font-weight: 500; }
 
-.cta-row {
+.hero-ctas {
+  margin-top: 36px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 12px;
-  align-items: center;
+  gap: 14px;
 }
 
-.cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 13px 22px;
-  border-radius: var(--radius-pill);
-  font-size: 15px;
-  font-weight: 500;
-  transition: all 200ms ease;
-  border: 1px solid transparent;
-  cursor: pointer;
-}
-
-.cta-primary {
-  background: var(--amber);
-  color: var(--bg);
-}
-.cta-primary:hover {
-  background: var(--amber-2);
-  box-shadow: 0 14px 30px -10px rgba(232,181,71,0.5);
-  transform: translateY(-1px);
-}
-
-.cta-ghost {
-  border-color: var(--glass-border-2);
-  color: var(--ink);
-  background: rgba(20,24,31,0.4);
-  backdrop-filter: blur(8px);
-}
-.cta-ghost:hover {
-  border-color: var(--teal);
-  color: var(--teal);
-  background: rgba(95,184,168,0.08);
-}
-
-.cta-arrow { transition: transform 200ms ease; }
-.cta:hover .cta-arrow { transform: translateX(4px); }
-
-@keyframes heroIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* =================================================================
-   SECTIONS
-   ================================================================= */
-
-section {
-  padding: clamp(80px, 10vw, 130px) var(--gutter);
+/* stat counters */
+.hero-stats {
   position: relative;
+  z-index: 1;
+  margin-top: clamp(60px, 8vw, 96px);
+  border-top: 1px solid var(--border);
 }
-
-.section-inner {
+.hero-stats-in {
   max-width: var(--maxw);
   margin: 0 auto;
-}
-
-.section-header {
+  padding: 0 var(--gutter);
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 14px;
-  margin-bottom: 56px;
-  max-width: 720px;
+  grid-template-columns: repeat(3, 1fr);
 }
-
-@media (min-width: 980px) {
-  .section-header {
-    grid-template-columns: 200px 1fr;
-    gap: 56px;
-    max-width: 980px;
-  }
-  .section-header .eyebrow { padding-top: 12px; }
+.stat {
+  padding: clamp(28px, 4vw, 44px) 20px;
+  text-align: center;
 }
-
-.section-header h2 {
-  font-size: clamp(32px, 4vw, 50px);
+.stat + .stat { border-left: 1px solid var(--border); }
+.stat-num {
   font-weight: 500;
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-  color: var(--ink);
+  font-size: clamp(34px, 4.6vw, 56px);
+  line-height: 1;
+  letter-spacing: -0.03em;
 }
-
-.section-header h2 em {
-  font-style: normal;
-  color: var(--teal);
+.stat-num em.serif { color: var(--primary); }
+.stat-label {
+  margin-top: 10px;
+  font-size: 14.5px;
+  color: var(--text-2);
 }
-
-.section-lede {
-  margin-top: 20px;
-  font-size: 17px;
-  line-height: 1.7;
-  color: var(--ink-2);
-  max-width: 640px;
+@media (max-width: 700px) {
+  .hero-stats-in { grid-template-columns: 1fr; }
+  .stat + .stat { border-left: none; border-top: 1px solid var(--border); }
 }
 
 /* =================================================================
-   MATRIX — capability / response / status
+   MARQUEE — ecosystem wordmarks
    ================================================================= */
 
-.matrix {
+.marquee-sec { padding: clamp(56px, 7vw, 88px) 0; border-bottom: 1px solid var(--border); }
+.marquee-title {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--text-3);
+  margin-bottom: 36px;
+}
+.marquee {
+  overflow: hidden;
+  position: relative;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+.marquee-track {
+  display: flex;
+  gap: 64px;
+  width: max-content;
+  animation: scroll 36s linear infinite;
+}
+.marquee:hover .marquee-track { animation-play-state: paused; }
+@keyframes scroll { to { transform: translateX(-50%); } }
+.mq-item {
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: -0.01em;
+  color: var(--text-3);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+.mq-item::after { content: '·'; color: rgba(255,255,255,0.15); }
+
+/* =================================================================
+   PULL QUOTE  (testimonial-slider slot)
+   ================================================================= */
+
+.quote-sec { border-bottom: 1px solid var(--border); }
+.quote-h {
+  font-weight: 500;
+  font-size: clamp(28px, 4vw, 46px);
+  letter-spacing: -0.03em;
+  text-align: center;
+  margin-bottom: clamp(40px, 5vw, 64px);
+}
+.bigquote {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: clamp(21px, 2.8vw, 32px);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+}
+.bigquote em.serif { color: var(--primary); }
+.bigquote-who {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+.bigquote-who .avatar {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), #ff9d0a);
+  color: #000;
+  font-weight: 900;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.bigquote-who .who-name { font-size: 15px; font-weight: 700; text-align: left; }
+.bigquote-who .who-role { font-size: 13px; color: var(--text-3); text-align: left; }
+
+/* =================================================================
+   PROBLEM
+   ================================================================= */
+
+.problem-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: clamp(40px, 6vw, 88px);
+  align-items: start;
+}
+@media (max-width: 880px) { .problem-grid { grid-template-columns: 1fr; } }
+
+.problem-facts {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border);
+}
+.pfact {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  padding: 22px 4px;
+  border-bottom: 1px solid var(--border);
+}
+.pfact-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 30px;
+  color: var(--primary);
+  min-width: 76px;
+  line-height: 1;
+}
+.pfact-body strong { display: block; font-weight: 700; font-size: 16px; }
+.pfact-body span { font-size: 14.5px; color: var(--text-2); }
+
+/* =================================================================
+   PROCESS — day-by-day framework
+   ================================================================= */
+
+.process-sec { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.process-list {
+  margin-top: clamp(40px, 5vw, 64px);
+  border-top: 1px solid var(--border);
+}
+.step {
+  display: grid;
+  grid-template-columns: 130px 1fr 1.4fr;
+  gap: clamp(20px, 3vw, 48px);
+  padding: 26px 4px;
+  border-bottom: 1px solid var(--border);
+  align-items: baseline;
+  transition: background 180ms ease;
+}
+.step:hover { background: var(--surface); }
+.step-day {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 22px;
+  color: var(--primary);
+  white-space: nowrap;
+}
+.step-title { font-weight: 700; font-size: 17px; letter-spacing: -0.01em; }
+.step-desc { font-size: 15px; color: var(--text-2); line-height: 1.6; }
+@media (max-width: 760px) {
+  .step { grid-template-columns: 1fr; gap: 6px; }
+}
+
+/* =================================================================
+   DIFFERENCE — value cards
+   ================================================================= */
+
+.diff-grid {
+  margin-top: clamp(40px, 5vw, 64px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+@media (max-width: 980px) { .diff-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .diff-grid { grid-template-columns: 1fr; } }
+
+.diff-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 28px 26px;
+  transition: border-color 200ms ease, background 200ms ease, transform 200ms ease;
+}
+.diff-card:hover {
+  background: var(--surface-2);
+  border-color: var(--border-2);
+  transform: translateY(-2px);
+}
+.diff-card .k {
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+.diff-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.diff-card p { font-size: 14.5px; color: var(--text-2); line-height: 1.6; }
+
+/* =================================================================
+   STACK — 4 pillars
+   ================================================================= */
+
+.stack-sec { border-top: 1px solid var(--border); }
+.stack-grid {
+  margin-top: clamp(40px, 5vw, 64px);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+@media (max-width: 1040px) { .stack-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .stack-grid { grid-template-columns: 1fr; } }
+
+.pillar {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 28px 24px;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  transition: border-color 200ms ease, background 200ms ease;
 }
-
-.matrix-head {
-  display: grid;
-  grid-template-columns: minmax(0,5fr) minmax(0,7fr) 120px;
-  gap: 28px;
-  padding: 0 clamp(20px, 3vw, 32px) 10px;
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--ink-3);
+.pillar:hover { background: var(--surface-2); border-color: var(--primary-20); }
+.pillar .p-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 22px;
+  color: var(--primary);
 }
-
-.mrow {
-  display: grid;
-  grid-template-columns: minmax(0,5fr) minmax(0,7fr) 120px;
-  gap: 28px;
-  padding: 24px clamp(20px, 3vw, 32px);
-  background: var(--bg-2);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  transition: border-color 220ms ease, background 220ms ease;
-  position: relative;
-  overflow: hidden;
-  align-items: start;
-}
-
-.mrow::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 0%;
-  height: 1px;
-  background: linear-gradient(90deg, var(--amber), var(--teal));
-  transition: width 600ms ease;
-}
-
-.mrow:hover {
-  border-color: var(--glass-border-2);
-  background: var(--bg-3);
-}
-.mrow:hover::before { width: 100%; }
-
-.mreq {
-  font-family: var(--mono);
-  font-size: 13px;
-  line-height: 1.6;
-  color: var(--ink-3);
-}
-.mreq::before { content: "» "; color: var(--amber-dim); }
-
-.mresp {
-  font-size: 15px;
-  line-height: 1.65;
-  color: var(--ink-2);
-}
-.mresp strong { color: var(--ink); font-weight: 500; }
-.mresp em { color: var(--ink-3); font-style: italic; }
-
-.mchip { display: flex; justify-content: flex-start; }
-
-.chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+.pillar h3 { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
+.pillar .p-sub { font-size: 14px; color: var(--text-2); min-height: 42px; }
+.pillar ul { list-style: none; display: flex; flex-wrap: wrap; gap: 7px; margin-top: 4px; }
+.pillar li {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text-2);
   padding: 5px 11px;
-  border-radius: var(--radius-pill);
-  font-family: var(--mono);
-  font-size: 10.5px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  border: 1px solid var(--line-2);
-  background: var(--bg);
-}
-.chip .dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-}
-.chip.met { color: var(--teal-2); border-color: rgba(95,184,168,0.35); }
-.chip.met .dot { background: var(--teal); box-shadow: 0 0 8px var(--teal); }
-.chip.adj { color: var(--amber-2); border-color: rgba(232,181,71,0.35); }
-.chip.adj .dot { background: var(--amber-dim); }
-
-@keyframes livepulse {
-  0%, 100% { opacity: 1; }
-  50%      { opacity: 0.5; }
-}
-
-@media (max-width: 880px) {
-  .matrix-head { display: none; }
-  .mrow { grid-template-columns: 1fr; gap: 14px; }
+  border: 1px solid var(--border-2);
+  border-radius: var(--r-pill);
+  background: rgba(0,0,0,0.3);
 }
 
 /* =================================================================
-   EVIDENCE — proof cards
+   TRACK RECORD — case cards
    ================================================================= */
 
-.cards {
+.cases-sec { border-top: 1px solid var(--border); }
+.case-grid {
+  margin-top: clamp(40px, 5vw, 64px);
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  overflow: hidden;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
 }
+@media (max-width: 980px) { .case-grid { grid-template-columns: 1fr; } }
 
-@media (min-width: 880px) {
-  .cards { grid-template-columns: repeat(3, 1fr); }
-}
-
-.card {
-  background: var(--bg);
-  padding: 34px 30px;
-  transition: background 200ms ease;
+.case-card {
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 30px 28px;
+  background:
+    radial-gradient(120% 90% at 50% 0%, var(--primary-5), transparent 60%),
+    var(--surface);
   display: flex;
   flex-direction: column;
   gap: 14px;
+  transition: border-color 200ms ease, transform 200ms ease;
 }
-.card:hover { background: var(--bg-2); }
-
-.card .tag {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.16em;
-  color: var(--ink-3);
-  text-transform: uppercase;
-}
-
-.card .big {
-  font-size: 25px;
-  font-weight: 500;
-  letter-spacing: -0.015em;
-  color: var(--ink);
-  line-height: 1.15;
-}
-
-.card p {
-  font-size: 14.5px;
-  line-height: 1.65;
-  color: var(--ink-2);
-}
-.card p strong { color: var(--amber); font-weight: 500; }
-
-/* =================================================================
-   POINT OF VIEW — quote + presence
-   ================================================================= */
-
-.pov {
-  background:
-    radial-gradient(ellipse at 80% 0%, rgba(232,181,71,0.08), transparent 60%),
-    radial-gradient(ellipse at 0% 100%, rgba(95,184,168,0.06), transparent 60%);
-}
-
-.quote {
-  position: relative;
-  padding-left: 30px;
-  max-width: 64ch;
-}
-.quote::before {
-  content: '';
-  position: absolute;
-  top: 4px; left: 0;
-  width: 3px;
-  height: calc(100% - 8px);
-  background: linear-gradient(180deg, var(--amber), var(--teal));
-  border-radius: 2px;
-}
-
-.quote p {
-  font-size: clamp(20px, 2.6vw, 27px);
-  font-weight: 500;
-  line-height: 1.45;
-  letter-spacing: -0.015em;
-  color: var(--ink);
-}
-.quote p em { font-style: normal; color: var(--amber); }
-
-.quote .who {
-  margin-top: 16px;
-  font-family: var(--mono);
+.case-card:hover { border-color: var(--primary-20); transform: translateY(-2px); }
+.case-tag {
   font-size: 12px;
-  letter-spacing: 0.1em;
-  color: var(--ink-3);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-3);
 }
-
-.presence {
-  margin-top: 44px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+.case-stat {
+  font-weight: 500;
+  font-size: clamp(26px, 2.6vw, 34px);
+  letter-spacing: -0.025em;
+  line-height: 1.1;
 }
-
-.pill {
-  font-family: var(--mono);
-  font-size: 11.5px;
-  letter-spacing: 0.04em;
-  color: var(--ink-2);
-  border: 1px solid var(--line-2);
-  border-radius: var(--radius-pill);
-  padding: 7px 14px;
-  background: var(--glass-bg);
-  transition: border-color 200ms ease, color 200ms ease;
-}
-.pill:hover { border-color: var(--line-3); color: var(--ink); }
-.pill b { color: var(--teal-2); font-weight: 500; }
+.case-stat em.serif { color: var(--primary); }
+.case-card p { font-size: 14.5px; color: var(--text-2); line-height: 1.65; }
+.case-card p strong { color: var(--text); font-weight: 700; }
 
 /* =================================================================
-   CONTACT
+   ENGAGE — models strip
    ================================================================= */
 
-.contact {
-  padding-bottom: clamp(100px, 12vw, 160px);
-}
-
-.contact-inner {
-  max-width: 880px;
-  margin: 0 auto;
-}
-
-.contact h2 {
-  font-size: clamp(38px, 5.6vw, 72px);
-  font-weight: 500;
-  line-height: 1.02;
-  letter-spacing: -0.03em;
-  margin: 16px 0 28px;
-  max-width: 18ch;
-}
-
-.contact h2 em {
-  font-style: normal;
-  color: var(--amber);
-}
-
-.contact-lede {
-  font-size: 19px;
-  line-height: 1.6;
-  color: var(--ink-2);
-  max-width: 56ch;
-  margin-bottom: 40px;
-}
-
-.contact-links {
-  display: flex;
-  flex-direction: column;
-  border-top: 1px solid var(--line-2);
-}
-
-.contact-link {
+.models {
+  margin-top: clamp(48px, 6vw, 72px);
   display: grid;
-  grid-template-columns: 130px 1fr auto;
-  align-items: center;
-  gap: 24px;
-  padding: 22px 0;
-  border-bottom: 1px solid var(--line-2);
-  font-size: 17px;
-  color: var(--ink);
-  transition: padding 200ms ease, color 200ms ease;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
 }
-a.contact-link:hover {
-  color: var(--amber);
-  padding-left: 12px;
+@media (max-width: 880px) { .models { grid-template-columns: 1fr; } }
+.model {
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 24px;
+  background: var(--surface);
 }
-.contact-link .label {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.16em;
-  color: var(--ink-3);
-  text-transform: uppercase;
-}
-.contact-link .arrow {
-  color: var(--ink-3);
-  transition: transform 200ms ease, color 200ms ease;
-}
-a.contact-link:hover .arrow {
-  transform: translateX(6px);
-  color: var(--amber);
-}
+.model h4 { font-size: 16.5px; font-weight: 700; margin-bottom: 6px; letter-spacing: -0.01em; }
+.model h4 em.serif { color: var(--primary); font-size: 1.05em; }
+.model p { font-size: 14px; color: var(--text-2); line-height: 1.55; }
 
-@media (max-width: 560px) {
-  .contact-link { grid-template-columns: 1fr auto; }
-  .contact-link .label { grid-column: 1 / -1; }
+/* =================================================================
+   FINAL CTA
+   ================================================================= */
+
+.cta-sec {
+  border-top: 1px solid var(--border);
+  overflow: hidden;
+  position: relative;
+}
+.cta-glow {
+  position: absolute;
+  left: 50%; bottom: -220px;
+  transform: translateX(-50%);
+  width: 900px; height: 480px;
+  background: radial-gradient(ellipse, rgba(255,214,10,0.14) 0%, transparent 65%);
+  filter: blur(50px);
+  pointer-events: none;
+}
+.cta-in { position: relative; z-index: 1; text-align: center; }
+.cta-in h2 { font-size: clamp(34px, 5.4vw, 68px); letter-spacing: -0.035em; }
+.cta-in .lede { margin-left: auto; margin-right: auto; }
+.cta-btns {
+  margin-top: 38px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
 }
 
 /* =================================================================
    FOOTER
    ================================================================= */
 
-footer {
-  padding: 32px var(--gutter);
-  border-top: 1px solid var(--line);
-  background: var(--bg);
-}
-
-.footer-inner {
-  max-width: var(--maxw);
-  margin: 0 auto;
+footer { border-top: 1px solid var(--border); padding: clamp(40px, 5vw, 56px) 0; }
+.foot-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 16px;
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  color: var(--ink-3);
-  text-transform: uppercase;
+  gap: 28px;
+  align-items: flex-start;
+}
+.foot-brand { font-weight: 700; font-size: 17px; letter-spacing: -0.02em; }
+.foot-brand .accent { color: var(--primary); }
+.foot-brand p { margin-top: 8px; font-size: 13.5px; font-weight: 400; color: var(--text-3); max-width: 34ch; }
+.foot-col { display: flex; flex-direction: column; gap: 8px; font-size: 14.5px; color: var(--text-2); }
+.foot-col .h { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); margin-bottom: 4px; }
+.foot-col a:hover { color: var(--primary); }
+.foot-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 12.5px;
+  color: var(--text-3);
 }
 
 /* =================================================================
-   ENTRANCE ANIMATIONS
+   REVEAL + MISC
    ================================================================= */
 
-.reveal {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 700ms ease, transform 700ms ease;
-}
-.reveal.in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 700ms ease, transform 700ms ease; }
+.reveal.in { opacity: 1; transform: translateY(0); }
+:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -741,205 +738,386 @@ footer {
     transition-duration: 0.01ms !important;
   }
   .reveal { opacity: 1; transform: none; }
+  .marquee-track { animation: none; }
 }
 </style>
 </head>
 <body>
 
-<div class="nav-wrap">
-  <nav class="nav">
-    <a class="brand" href="https://gridtechgtm.com">
-      <span class="brand-name">gridtechGTM</span>
-      <span class="brand-slash">/</span>
-      <span class="brand-tag">principal</span>
-      <span class="brand-hz"><span class="dot" aria-hidden="true"></span>50.00&nbsp;Hz</span>
+<nav class="navbar">
+  <div class="nav-in">
+    <a class="logo" href="https://gridtechgtm.com">
+      <svg width="22" height="22" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="6" fill="rgba(255,255,255,0.06)"/><path d="M 6 14 L 11 14 L 13 8 L 15 20 L 17 14 L 22 14" stroke="#FFD60A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>gridtech<span class="accent">GTM</span></span>
     </a>
     <div class="nav-links">
-      <a class="nav-link" href="#operating-system">Operating system</a>
-      <a class="nav-link" href="#evidence">Evidence</a>
-      <a class="nav-link" href="#pov">Point of view</a>
-      <a class="nav-cta" href="mailto:aron@gridtechgtm.com?subject=Digital%20Grid%20Sales%20%E2%80%94%20call">Get in touch</a>
+      <a class="nav-link" href="#problem">The problem</a>
+      <a class="nav-link" href="#process">Process</a>
+      <a class="nav-link" href="#stack">Services</a>
+      <a class="nav-link" href="#track-record">Track record</a>
+      <a class="btn btn-primary btn-nav" href="mailto:aron@gridtechgtm.com?subject=Territory%20diagnostic">Book a call</a>
     </div>
-  </nav>
-</div>
+  </div>
+</nav>
 
 <header class="hero">
-  <div class="sun" aria-hidden="true"></div>
-  <div class="hero-inner">
-    <div class="hero-card">
-      <span class="eyebrow">Aron Lazarchick · Principal</span>
-      <h1>I sell the <em>digital layer</em> of the grid.</h1>
-      <p class="hero-sub">Technical sales for grid-edge and DER integration software — the layer that connects CPOs, aggregators, and DSOs into the grid. <strong>Eight years in the European energy transition</strong>, based in Portugal, working across southern and western European markets.</p>
-      <div class="cta-row">
-        <a class="cta cta-primary" href="mailto:aron@gridtechgtm.com?subject=Digital%20Grid%20Sales%20%E2%80%94%20call">Get in touch <span class="cta-arrow">→</span></a>
-        <a class="cta cta-ghost" href="https://www.linkedin.com/in/alazarchick/">LinkedIn</a>
+  <div class="hero-glow" aria-hidden="true">
+    <div class="grid-lines"></div>
+    <div class="glow-a"></div>
+    <div class="glow-b"></div>
+  </div>
+
+  <div class="hero-in">
+    <div class="hero-callout reveal">
+      <span class="pulse" aria-hidden="true"></span>
+      <span class="co-main">&ldquo;Fluent in the utility buyer&rdquo;</span>
+      <span class="co-sub">8 years · grid-edge deals</span>
+    </div>
+
+    <h1 class="reveal">Grid-Scale Growth<br>for <em class="serif">Grid-Edge Tech</em></h1>
+
+    <p class="hero-sub reveal">The only GTM partner built for the utility buyer — protocol-deep positioning, signal-tracked pipeline and RFP-winning execution for DERMS, VPP, grid-edge and eMobility companies.</p>
+
+    <div class="hero-ctas reveal">
+      <a class="btn btn-primary" href="mailto:aron@gridtechgtm.com?subject=Territory%20diagnostic">Request a Territory Diagnostic</a>
+      <a class="btn btn-secondary" href="#track-record">See the track record</a>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="hero-stats-in">
+      <div class="stat reveal">
+        <div class="stat-num">+£<span class="count" data-target="700">0</span><em class="serif">k</em></div>
+        <div class="stat-label">closed with a UK network operator</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num"><span class="count" data-target="7">0</span><em class="serif">-figure</em></div>
+        <div class="stat-label">pipeline built in under a year</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num"><span class="count" data-target="8">0</span><em class="serif">yrs</em></div>
+        <div class="stat-label">selling the European energy transition</div>
       </div>
     </div>
   </div>
 </header>
 
-<main>
-
-<section id="operating-system">
-  <div class="section-inner">
-    <div class="section-header">
-      <span class="eyebrow">Operating system</span>
-      <div>
-        <h2>How I run <em>a territory.</em></h2>
-        <p class="section-lede">I write bids for a living, so this reads like one: capability on the left, evidence on the right, statuses included. Amber means adjacent, not core — buyers deserve to know the difference.</p>
-      </div>
+<section class="marquee-sec">
+  <div class="marquee-title">Deals, deployments and standards work across the digital grid</div>
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="mq-item">Northern Powergrid</span>
+      <span class="mq-item">Volkswagen Group</span>
+      <span class="mq-item">ŠKODA</span>
+      <span class="mq-item">Elli</span>
+      <span class="mq-item">SMPnet</span>
+      <span class="mq-item">OpenADR Alliance</span>
+      <span class="mq-item">SunSpec Europe</span>
+      <span class="mq-item">FLEXCON</span>
+      <span class="mq-item">Enlit Europe</span>
+      <span class="mq-item">Northern Powergrid</span>
+      <span class="mq-item">Volkswagen Group</span>
+      <span class="mq-item">ŠKODA</span>
+      <span class="mq-item">Elli</span>
+      <span class="mq-item">SMPnet</span>
+      <span class="mq-item">OpenADR Alliance</span>
+      <span class="mq-item">SunSpec Europe</span>
+      <span class="mq-item">FLEXCON</span>
+      <span class="mq-item">Enlit Europe</span>
     </div>
+  </div>
+</section>
 
-    <div class="matrix">
-      <div class="matrix-head" aria-hidden="true"><span>Capability</span><span>Response</span><span>Status</span></div>
+<section class="quote-sec sec-pad">
+  <div class="wrap-m">
+    <h2 class="quote-h reveal">&ldquo;The digital-grid <em class="serif">go-to-market</em> operator.&rdquo;</h2>
+    <blockquote class="bigquote reveal">
+      Digital grid is ultimately a <em class="serif">narrative sale</em> — convincing the people who run today's grid to invest in tomorrow's. Building that story, market by market, is the work.
+    </blockquote>
+    <div class="bigquote-who reveal">
+      <span class="avatar" aria-hidden="true">AL</span>
+      <span>
+        <span class="who-name">Aron Lazarchick</span><br>
+        <span class="who-role">Principal · gridtechGTM · Portugal</span>
+      </span>
+    </div>
+  </div>
+</section>
 
-      <div class="mrow reveal">
-        <div class="mreq">Analyze customer technical specifications and translate them into solutions</div>
-        <div class="mresp">My current job at Codibly: translating DSO, TSO, and CPO technical requirements into scoped integration proposals across the grid-edge protocol stack, including OpenADR-to-SCADA work.</div>
-        <div class="mchip"><span class="chip met"><span class="dot"></span>Met</span></div>
+<section id="problem" class="sec-pad">
+  <div class="wrap">
+    <div class="problem-grid">
+      <div>
+        <span class="tag reveal">The problem</span>
+        <h2 class="reveal">Grid tech doesn't sell like <em class="serif">SaaS.</em></h2>
+        <p class="lede reveal">Demand is created by regulation, not marketing. The buyer is a risk-averse engineer with a procurement department behind them. And the sales cycle outlives most sales hires. Most grid software companies respond with a generalist playbook — <strong>and stall at the pilot.</strong> We turn the constraints of utility procurement into an operating system for territory revenue.</p>
       </div>
-
-      <div class="mrow reveal">
-        <div class="mreq">Prepare and present technical and commercial proposals, on spec and on deadline</div>
-        <div class="mresp">Technical and commercial bids are the core of the role I hold today — grid flexibility, demand response, and DER integration projects across European and US markets.</div>
-        <div class="mchip"><span class="chip met"><span class="dot"></span>Met</span></div>
-      </div>
-
-      <div class="mrow reveal">
-        <div class="mreq">Define and execute country-level go-to-market strategy</div>
-        <div class="mresp">Country campaigns built on regulatory catalysts: DSO flexibility in Austria, grid-aware EV charging in the Netherlands. Signal-tracked account prioritisation, per market.</div>
-        <div class="mchip"><span class="chip met"><span class="dot"></span>Met</span></div>
-      </div>
-
-      <div class="mrow reveal">
-        <div class="mreq">Act as the link between customers, local partners, and delivery</div>
-        <div class="mresp">Every deal I run sits between the customer, local partners, and the delivery organisation. Sole commercial owner, so the bridge role is not shared — it is the job.</div>
-        <div class="mchip"><span class="chip met"><span class="dot"></span>Met</span></div>
-      </div>
-
-      <div class="mrow reveal">
-        <div class="mreq">Represent the portfolio at industry events and grow the network</div>
-        <div class="mresp">Speaker at FLEXCON and Arnhem Energy Week. Moderator of OpenADR Alliance webinars. Regular at Enlit Europe and Transmission Expo Cologne. Joining SunSpec Europe as a policy advisor as the organisation is established.</div>
-        <div class="mchip"><span class="chip met"><span class="dot"></span>Met</span></div>
-      </div>
-
-      <div class="mrow reveal">
-        <div class="mreq">Protection, control, and substation automation for HV/MV substations</div>
-        <div class="mresp">No hands-on P&amp;C — I have never commissioned a relay. Four years on the systems that integrate with substations from the grid-edge side, including a substation-integrated flexibility trial on a live DNO network. <em>I know the substation from the other end of the wire.</em></div>
-        <div class="mchip"><span class="chip adj"><span class="dot"></span>Adjacent</span></div>
-      </div>
-
-      <div class="mrow reveal">
-        <div class="mreq">Formal engineering background</div>
-        <div class="mresp">MSc Energy Security (Masaryk University) and BA Economics &amp; Finance — the policy-and-commercial half of the energy transition rather than the engineering half. Adjacent, honestly labelled.</div>
-        <div class="mchip"><span class="chip adj"><span class="dot"></span>Adjacent</span></div>
-      </div>
-
-      <div class="mrow reveal">
-        <div class="mreq">Communication and presentation in English · regular travel across the territory</div>
-        <div class="mresp">Native English speaker. Based in Portugal, in-region, comfortable with regular travel across the territory.</div>
-        <div class="mchip"><span class="chip met"><span class="dot"></span>Met</span></div>
+      <div class="problem-facts reveal">
+        <div class="pfact">
+          <span class="pfact-num">18–36</span>
+          <span class="pfact-body"><strong>months per sales cycle</strong><span>utilities buy slowly, then all at once — you need to be in the room early</span></span>
+        </div>
+        <div class="pfact">
+          <span class="pfact-num">RFP</span>
+          <span class="pfact-body"><strong>-driven procurement</strong><span>deals are won in the bid, not the demo — spec influence is the game</span></span>
+        </div>
+        <div class="pfact">
+          <span class="pfact-num">policy</span>
+          <span class="pfact-body"><strong>-shaped demand</strong><span>every market opens on a regulatory catalyst — track the signal, time the entry</span></span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="evidence">
-  <div class="section-inner">
-    <div class="section-header">
-      <span class="eyebrow">Evidence</span>
-      <div>
-        <h2>Three deals that <em>describe the profile.</em></h2>
+<section id="process" class="process-sec sec-pad">
+  <div class="wrap">
+    <span class="tag reveal">Our process</span>
+    <h2 class="reveal">The Territory <em class="serif">Operating System</em></h2>
+    <p class="lede reveal">A bid-writer's discipline applied to a whole territory: measurable checkpoints, board-ready reporting, and a pipeline your CFO can audit.</p>
+
+    <div class="process-list">
+      <div class="step reveal">
+        <span class="step-day">Day 0</span>
+        <span class="step-title">Territory Charter Kick-Off</span>
+        <span class="step-desc">ICP, market thesis and win criteria on one page. Which regulatory catalysts, which buyer types, which protocols in scope.</span>
+      </div>
+      <div class="step reveal">
+        <span class="step-day">Day 14</span>
+        <span class="step-title">Signal Map &amp; Account Prioritisation</span>
+        <span class="step-desc">Every DSO, CPO and aggregator in the territory ranked by regulatory trigger, tender history and technical fit — not by employee count.</span>
+      </div>
+      <div class="step reveal">
+        <span class="step-day">Day 30</span>
+        <span class="step-title">First Utility Conversations</span>
+        <span class="step-desc">Warm entry through standards bodies, industry events and the operator network — not cold sequences that utilities never answer.</span>
+      </div>
+      <div class="step reveal">
+        <span class="step-day">Day 90</span>
+        <span class="step-title">Qualified Pipeline &amp; First Bids</span>
+        <span class="step-desc">Scoped technical proposals in flight. Weekly growth loop with delivery so what sales promises, engineering can ship.</span>
+      </div>
+      <div class="step reveal">
+        <span class="step-day">Day 180</span>
+        <span class="step-title">RFPs Submitted, Consortium Built</span>
+        <span class="step-desc">The bids that matter answered on spec and on deadline — with the local partners and consortium structure to be credible.</span>
+      </div>
+      <div class="step reveal">
+        <span class="step-day">Day 365</span>
+        <span class="step-title">Closed, Referenceable Revenue</span>
+        <span class="step-desc">Not just logos: deals that produce a reference architecture and a case study that opens the next market.</span>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="cards">
-      <div class="card reveal">
-        <div class="tag">DNO · United Kingdom</div>
-        <div class="big">£700K closed</div>
-        <p>Partnership with <strong>Northern Powergrid</strong> inside the Condor Consortium — first trial of its Ofgem-funded <strong>Community DSO</strong> flagship project. Worked directly with SMPnet on substation-integrated autonomous grid management, non-wires alternatives in scope.</p>
+<section class="sec-pad">
+  <div class="wrap">
+    <span class="tag reveal">Our difference</span>
+    <h2 class="reveal">We live and breathe <em class="serif">grid tech</em> GTM.</h2>
+    <p class="lede reveal">Most consultants bring either sector knowledge or sales execution. Almost none have carried the number themselves. gridtechGTM translates working depth in OpenADR, ISO 15118, OCPP and SCADA integration into campaigns, bids and closed contracts.</p>
+
+    <div class="diff-grid">
+      <div class="diff-card reveal">
+        <div class="k">The playbook</div>
+        <h3>Proven with £700K closed and a 7-figure pipeline attributed</h3>
+        <p>First-of-kind DNO deal, OEM software shipped in production, and a pipeline built from zero in under a year.</p>
       </div>
-      <div class="card reveal">
-        <div class="tag">OEM · Volkswagen Group</div>
-        <div class="big">Shipped in production</div>
+      <div class="diff-card reveal">
+        <div class="k">The depth</div>
+        <h3>Protocol-deep, from grid-edge to control room</h3>
+        <p>OpenADR-to-SCADA scoping, ISO 15118 Plug &amp; Charge, OCPP charging infrastructure. We speak DSO, and we can hold the technical room.</p>
+      </div>
+      <div class="diff-card reveal">
+        <div class="k">The network</div>
+        <h3>Already in the rooms where the sector decides</h3>
+        <p>Speaker at FLEXCON and Arnhem Energy Week, moderator for the OpenADR Alliance, incoming policy advisor at SunSpec Europe.</p>
+      </div>
+      <div class="diff-card reveal">
+        <div class="k">The focus</div>
+        <h3>B2B grid technology only</h3>
+        <p>DERMS, VPP, flexibility, grid-edge and eMobility software. If your buyer isn't wired to the grid, we're not your partner.</p>
+      </div>
+      <div class="diff-card reveal">
+        <div class="k">The economics</div>
+        <h3>A full CRO motion for less than a bad sales hire</h3>
+        <p>Senior, protocol-literate selling without the 12-month ramp — and without the severance when a generalist VP doesn't land.</p>
+      </div>
+      <div class="diff-card reveal">
+        <div class="k">The assurance</div>
+        <h3>Zero lock-in, full transfer</h3>
+        <p>Stop anytime and keep the signal map, the account plans and the bid library. The system is built to be handed over — or hired in.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="stack" class="stack-sec sec-pad">
+  <div class="wrap">
+    <div class="center">
+      <span class="tag reveal">Our solution</span>
+      <h2 class="reveal">The Utility <em class="serif">Revenue Stack</em></h2>
+      <p class="lede reveal">Four layers, one owner — from market signal to countersigned contract.</p>
+    </div>
+
+    <div class="stack-grid">
+      <div class="pillar reveal">
+        <span class="p-num">01</span>
+        <h3>Map</h3>
+        <p class="p-sub">Know which accounts open, and when</p>
+        <ul>
+          <li>Regulatory signal tracking</li>
+          <li>Account prioritisation</li>
+          <li>Country GTM strategy</li>
+          <li>Tender monitoring</li>
+        </ul>
+      </div>
+      <div class="pillar reveal">
+        <span class="p-num">02</span>
+        <h3>Open</h3>
+        <p class="p-sub">Get into the room before the RFP is written</p>
+        <ul>
+          <li>Narrative &amp; positioning</li>
+          <li>Standards-body presence</li>
+          <li>Event &amp; speaking strategy</li>
+          <li>Operator network intros</li>
+        </ul>
+      </div>
+      <div class="pillar reveal">
+        <span class="p-num">03</span>
+        <h3>Prove</h3>
+        <p class="p-sub">Turn technical scrutiny into confidence</p>
+        <ul>
+          <li>Technical pre-sales</li>
+          <li>Protocol &amp; integration scoping</li>
+          <li>Pilot &amp; trial design</li>
+          <li>Delivery alignment</li>
+        </ul>
+      </div>
+      <div class="pillar reveal">
+        <span class="p-num">04</span>
+        <h3>Close</h3>
+        <p class="p-sub">Win the bid, sign the deal, keep the reference</p>
+        <ul>
+          <li>Bid &amp; RFP writing</li>
+          <li>Consortium building</li>
+          <li>Commercial negotiation</li>
+          <li>Reference &amp; case-study capture</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="track-record" class="cases-sec sec-pad">
+  <div class="wrap">
+    <div class="center">
+      <span class="tag reveal">Track record</span>
+      <h2 class="reveal">Deals from <em class="serif">the field</em></h2>
+      <p class="lede reveal">Not client logos on loan — deals personally sourced, negotiated and closed.</p>
+    </div>
+
+    <div class="case-grid">
+      <div class="case-card reveal">
+        <div class="case-tag">DNO · United Kingdom</div>
+        <div class="case-stat">£700K <em class="serif">closed</em></div>
+        <p>Partnership with <strong>Northern Powergrid</strong> inside the Condor Consortium — first trial of its Ofgem-funded <strong>Community DSO</strong> flagship. Substation-integrated autonomous grid management with SMPnet, non-wires alternatives in scope.</p>
+      </div>
+      <div class="case-card reveal">
+        <div class="case-tag">OEM · Volkswagen Group</div>
+        <div class="case-stat">Shipped <em class="serif">in production</em></div>
         <p><strong>ISO 15118 Plug &amp; Charge</strong> for the ŠKODA Enyaq — one of the earliest OEM-side deployments in European automotive, delivered inside VW Group's SAFe framework with Elli.</p>
       </div>
-      <div class="card reveal">
-        <div class="tag">Current · Codibly</div>
-        <div class="big">Seven-figure pipeline</div>
-        <p>Built in under a year, spanning <strong>UK network operators</strong>, the <strong>Dutch grid operators' flexibility ecosystem</strong>, and European TSOs and OEMs. Pipeline only matters if it converts — see column one.</p>
+      <div class="case-card reveal">
+        <div class="case-tag">Vendor · Europe &amp; US</div>
+        <div class="case-stat">7-figure <em class="serif">pipeline</em></div>
+        <p>Built from zero in under a year for a grid software vendor — spanning <strong>UK network operators</strong>, the <strong>Dutch flexibility ecosystem</strong>, and European TSOs and OEMs. Pipeline only matters if it converts — see card one.</p>
+      </div>
+    </div>
+
+    <div class="models">
+      <div class="model reveal">
+        <h4>Fractional <em class="serif">CRO</em></h4>
+        <p>Two to three days a week owning your grid territory end-to-end. The full stack above, on a retainer.</p>
+      </div>
+      <div class="model reveal">
+        <h4>Country <em class="serif">launch</em></h4>
+        <p>A fixed-scope market entry: signal map, first conversations, first bids. Ninety days to a proven territory thesis.</p>
+      </div>
+      <div class="model reveal">
+        <h4>In-house <em class="serif">principal</em></h4>
+        <p>For the right platform, the practice folds in: one senior technical seller, full-time, carrying the number as your first commercial hire in the region.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="pov" class="pov">
-  <div class="section-inner">
-    <div class="section-header">
-      <span class="eyebrow">Point of view</span>
-      <div>
-        <div class="quote reveal">
-          <p>Digital grid is ultimately a <em>narrative sale</em> — convincing customers who run today's grid to invest in tomorrow's. Building that story, market by market, is the part of this work I do best.</p>
-          <div class="who">— the short version of how I sell</div>
-        </div>
-        <div class="presence reveal">
-          <span class="pill"><b>Speaker</b> · FLEXCON</span>
-          <span class="pill"><b>Speaker</b> · Arnhem Energy Week</span>
-          <span class="pill"><b>Moderator</b> · OpenADR Alliance</span>
-          <span class="pill"><b>Incoming policy advisor</b> · SunSpec Europe</span>
-          <span class="pill">Enlit Europe</span>
-          <span class="pill">Transmission Expo Cologne</span>
-          <span class="pill">Relationships opened: Alliander · ElaadNL</span>
-        </div>
-      </div>
+<section class="cta-sec sec-pad">
+  <div class="cta-glow" aria-hidden="true"></div>
+  <div class="wrap cta-in">
+    <span class="tag reveal">Next step</span>
+    <h2 class="reveal">Map your next 90 days of <em class="serif">grid revenue.</em></h2>
+    <p class="lede reveal">Book a free 30-minute territory session. Leave with a signal map of your top accounts and three winnable plays — whether we work together or not.</p>
+    <div class="cta-btns reveal">
+      <a class="btn btn-primary" href="mailto:aron@gridtechgtm.com?subject=Territory%20session%20%E2%80%94%2030%20min">Schedule a call</a>
+      <a class="btn btn-secondary" href="https://www.linkedin.com/in/alazarchick/">LinkedIn</a>
     </div>
   </div>
 </section>
-
-<section class="contact">
-  <div class="contact-inner">
-    <span class="eyebrow">Contact</span>
-    <h2>If this maps to something you are building, <em>say so.</em></h2>
-    <p class="contact-lede">I am easy to schedule and I answer my own email. The rest is better said than written.</p>
-    <div class="contact-links">
-      <a class="contact-link" href="mailto:aron@gridtechgtm.com">
-        <span class="label">Email</span>
-        <span>aron@gridtechgtm.com</span>
-        <span class="arrow">→</span>
-      </a>
-      <a class="contact-link" href="tel:+351923223554">
-        <span class="label">Phone</span>
-        <span>+351 923 223 554</span>
-        <span class="arrow">→</span>
-      </a>
-      <a class="contact-link" href="https://www.linkedin.com/in/alazarchick/">
-        <span class="label">LinkedIn</span>
-        <span>linkedin.com/in/alazarchick</span>
-        <span class="arrow">→</span>
-      </a>
-      <div class="contact-link">
-        <span class="label">Base</span>
-        <span>Portugal · in-region</span>
-        <span class="arrow" aria-hidden="true"></span>
-      </div>
-    </div>
-  </div>
-</section>
-
-</main>
 
 <footer>
-  <div class="footer-inner">
-    <span>gridtechGTM · principal profile</span>
-    <span>© 2026 · Pombal, Portugal · Grid operational · 50.00 Hz</span>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        gridtech<span class="accent">GTM</span>
+        <p>Go-to-market for grid technology. Run by a principal, not an agency.</p>
+      </div>
+      <div class="foot-col">
+        <span class="h">Contact</span>
+        <a href="mailto:aron@gridtechgtm.com">aron@gridtechgtm.com</a>
+        <a href="tel:+351923223554">+351 923 223 554</a>
+        <span>Pombal, Portugal · in-region</span>
+      </div>
+      <div class="foot-col">
+        <span class="h">Connect</span>
+        <a href="https://www.linkedin.com/in/alazarchick/">LinkedIn</a>
+        <a href="#problem">The problem</a>
+        <a href="#stack">Services</a>
+        <a href="#track-record">Track record</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 gridtechGTM</span>
+      <span>Grid operational · 50.00 Hz</span>
+    </div>
   </div>
 </footer>
 
 <script>
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
-  },{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  // reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // stat count-up
+  const cio = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      cio.unobserve(e.target);
+      const el = e.target;
+      const target = parseInt(el.dataset.target, 10);
+      const dur = 900;
+      const t0 = performance.now();
+      const tick = (t) => {
+        const p = Math.min((t - t0) / dur, 1);
+        el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.count').forEach(el => cio.observe(el));
 </script>
 </body>
 </html>
