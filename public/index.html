@@ -642,13 +642,23 @@ h1 {
 .case-stat em.serif { color: var(--primary); }
 .case-card p { font-size: 14.5px; color: var(--text-2); line-height: 1.65; }
 .case-card p strong { color: var(--text); font-weight: 700; }
+.case-link {
+  margin-top: auto;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text-3);
+  transition: color 160ms ease;
+}
+.case-link:hover { color: var(--primary); }
 
 /* =================================================================
-   ENGAGE — models strip
+   ENGAGE — models section
    ================================================================= */
 
+.engage-sec { border-top: 1px solid var(--border); }
 .models {
-  margin-top: clamp(48px, 6vw, 72px);
+  margin-top: clamp(36px, 4.5vw, 56px);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
@@ -659,10 +669,24 @@ h1 {
   border-radius: var(--r-lg);
   padding: 24px;
   background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  transition: border-color 200ms ease, background 200ms ease;
 }
+.model:hover { background: var(--surface-2); border-color: var(--primary-20); }
 .model h4 { font-size: 16.5px; font-weight: 700; margin-bottom: 6px; letter-spacing: -0.01em; }
 .model h4 em.serif { color: var(--primary); font-size: 1.05em; }
 .model p { font-size: 14px; color: var(--text-2); line-height: 1.55; }
+.model-cta {
+  margin-top: auto;
+  padding-top: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--text-3);
+  transition: color 160ms ease;
+}
+.model-cta:hover { color: var(--primary); }
 
 /* =================================================================
    FINAL CTA
@@ -755,7 +779,9 @@ footer { border-top: 1px solid var(--border); padding: clamp(40px, 5vw, 56px) 0;
       <a class="nav-link" href="#process">Process</a>
       <a class="nav-link" href="#stack">Services</a>
       <a class="nav-link" href="#track-record">Track record</a>
-      <a class="btn btn-primary btn-nav" href="mailto:aron@gridtechgtm.com?subject=Territory%20diagnostic">Book a call</a>
+      <a class="nav-link" href="#engage">Ways to engage</a>
+      <a class="nav-link" href="https://www.linkedin.com/in/alazarchick/">LinkedIn</a>
+      <a class="btn btn-primary btn-nav" href="mailto:aron@gridtechgtm.com?subject=Territory%20diagnostic">Get in touch</a>
     </div>
   </div>
 </nav>
@@ -770,13 +796,13 @@ footer { border-top: 1px solid var(--border); padding: clamp(40px, 5vw, 56px) 0;
   <div class="hero-in">
     <div class="hero-callout reveal">
       <span class="pulse" aria-hidden="true"></span>
-      <span class="co-main">&ldquo;Fluent in the utility buyer&rdquo;</span>
+      <span class="co-main">Aron Lazarchick · Principal</span>
       <span class="co-sub">8 years · grid-edge deals</span>
     </div>
 
     <h1 class="reveal">Grid-Scale Growth<br>for <em class="serif">Grid-Edge Tech</em></h1>
 
-    <p class="hero-sub reveal">The only GTM partner built for the utility buyer — protocol-deep positioning, signal-tracked pipeline and RFP-winning execution for DERMS, VPP, grid-edge and eMobility companies.</p>
+    <p class="hero-sub reveal">A GTM practice built for the utility buyer — protocol-deep positioning, signal-tracked pipeline and RFP-winning execution for DERMS, VPP, grid-edge and eMobility companies.</p>
 
     <div class="hero-ctas reveal">
       <a class="btn btn-primary" href="mailto:aron@gridtechgtm.com?subject=Territory%20diagnostic">Request a Territory Diagnostic</a>
@@ -803,7 +829,7 @@ footer { border-top: 1px solid var(--border); padding: clamp(40px, 5vw, 56px) 0;
 </header>
 
 <section class="marquee-sec">
-  <div class="marquee-title">Deals, deployments and standards work across the digital grid</div>
+  <div class="marquee-title">Eight years across the digital grid — deals, deployments, standards bodies and stages</div>
   <div class="marquee">
     <div class="marquee-track">
       <span class="mq-item">Northern Powergrid</span>
@@ -830,7 +856,7 @@ footer { border-top: 1px solid var(--border); padding: clamp(40px, 5vw, 56px) 0;
 
 <section class="quote-sec sec-pad">
   <div class="wrap-m">
-    <h2 class="quote-h reveal">&ldquo;The digital-grid <em class="serif">go-to-market</em> operator.&rdquo;</h2>
+    <h2 class="quote-h reveal">The digital-grid <em class="serif">go-to-market</em> operator.</h2>
     <blockquote class="bigquote reveal">
       Digital grid is ultimately a <em class="serif">narrative sale</em> — convincing the people who run today's grid to invest in tomorrow's. Building that story, market by market, is the work.
     </blockquote>
@@ -905,7 +931,7 @@ footer { border-top: 1px solid var(--border); padding: clamp(40px, 5vw, 56px) 0;
       <div class="step reveal">
         <span class="step-day">Day 365</span>
         <span class="step-title">Closed, Referenceable Revenue</span>
-        <span class="step-desc">Not just logos: deals that produce a reference architecture and a case study that opens the next market.</span>
+        <span class="step-desc">Closed inside the cycle, not after it: the funded route — grants, consortiums, regulator sandboxes — beats the 36-month RFP clock. It is how the £700K Community DSO deal landed, and it produces the reference that opens the next market.</span>
       </div>
     </div>
   </div>
@@ -915,7 +941,7 @@ footer { border-top: 1px solid var(--border); padding: clamp(40px, 5vw, 56px) 0;
   <div class="wrap">
     <span class="tag reveal">Our difference</span>
     <h2 class="reveal">We live and breathe <em class="serif">grid tech</em> GTM.</h2>
-    <p class="lede reveal">Most consultants bring either sector knowledge or sales execution. Almost none have carried the number themselves. gridtechGTM translates working depth in OpenADR, ISO 15118, OCPP and SCADA integration into campaigns, bids and closed contracts.</p>
+    <p class="lede reveal">Most consultants bring either sector knowledge or sales execution. Almost none have carried the number themselves. gridtechGTM translates working depth in OpenADR, ISO 15118 and OCPP — and in scoping how grid-edge systems land against SCADA — into campaigns, bids and closed contracts.</p>
 
     <div class="diff-grid">
       <div class="diff-card reveal">
@@ -925,8 +951,8 @@ footer { border-top: 1px solid var(--border); padding: clamp(40px, 5vw, 56px) 0;
       </div>
       <div class="diff-card reveal">
         <div class="k">The depth</div>
-        <h3>Protocol-deep, from grid-edge to control room</h3>
-        <p>OpenADR-to-SCADA scoping, ISO 15118 Plug &amp; Charge, OCPP charging infrastructure. We speak DSO, and we can hold the technical room.</p>
+        <h3>Protocol-deep at the grid edge</h3>
+        <p>OpenADR-to-SCADA integration scoping, ISO 15118 Plug &amp; Charge, OCPP charging infrastructure. We speak DSO, and we can hold the technical room.</p>
       </div>
       <div class="diff-card reveal">
         <div class="k">The network</div>
@@ -1014,7 +1040,7 @@ footer { border-top: 1px solid var(--border); padding: clamp(40px, 5vw, 56px) 0;
     <div class="center">
       <span class="tag reveal">Track record</span>
       <h2 class="reveal">Deals from <em class="serif">the field</em></h2>
-      <p class="lede reveal">Not client logos on loan — deals personally sourced, negotiated and closed.</p>
+      <p class="lede reveal">Not client logos on loan — deals personally sourced, negotiated, closed — or shipped into production.</p>
     </div>
 
     <div class="case-grid">
@@ -1022,6 +1048,7 @@ footer { border-top: 1px solid var(--border); padding: clamp(40px, 5vw, 56px) 0;
         <div class="case-tag">DNO · United Kingdom</div>
         <div class="case-stat">£700K <em class="serif">closed</em></div>
         <p>Partnership with <strong>Northern Powergrid</strong> inside the Condor Consortium — first trial of its Ofgem-funded <strong>Community DSO</strong> flagship. Substation-integrated autonomous grid management with SMPnet, non-wires alternatives in scope.</p>
+        <a class="case-link" href="https://electricplaces.co.uk/condor-community-dso-netzero-energy-control/" target="_blank" rel="noopener">Project reference ↗</a>
       </div>
       <div class="case-card reveal">
         <div class="case-tag">OEM · Volkswagen Group</div>
@@ -1035,18 +1062,31 @@ footer { border-top: 1px solid var(--border); padding: clamp(40px, 5vw, 56px) 0;
       </div>
     </div>
 
+  </div>
+</section>
+
+<section id="engage" class="engage-sec sec-pad">
+  <div class="wrap">
+    <div class="center">
+      <span class="tag reveal">Ways to engage</span>
+      <h2 class="reveal">Three ways to <em class="serif">plug in</em></h2>
+    </div>
+
     <div class="models">
       <div class="model reveal">
         <h4>Fractional <em class="serif">CRO</em></h4>
         <p>Two to three days a week owning your grid territory end-to-end. The full stack above, on a retainer.</p>
+        <a class="model-cta" href="mailto:aron@gridtechgtm.com?subject=Fractional%20CRO">Open the conversation →</a>
       </div>
       <div class="model reveal">
         <h4>Country <em class="serif">launch</em></h4>
         <p>A fixed-scope market entry: signal map, first conversations, first bids. Ninety days to a proven territory thesis.</p>
+        <a class="model-cta" href="mailto:aron@gridtechgtm.com?subject=Country%20launch">Open the conversation →</a>
       </div>
       <div class="model reveal">
         <h4>In-house <em class="serif">principal</em></h4>
-        <p>For the right platform, the practice folds in: one senior technical seller, full-time, carrying the number as your first commercial hire in the region.</p>
+        <p>For the right platform, the practice folds in: one senior technical seller, full-time, carrying the number as your first commercial hire in the region. If that's the conversation you want to have, say so.</p>
+        <a class="model-cta" href="mailto:aron@gridtechgtm.com?subject=In-house%20principal">Open the conversation →</a>
       </div>
     </div>
   </div>
@@ -1056,10 +1096,10 @@ footer { border-top: 1px solid var(--border); padding: clamp(40px, 5vw, 56px) 0;
   <div class="cta-glow" aria-hidden="true"></div>
   <div class="wrap cta-in">
     <span class="tag reveal">Next step</span>
-    <h2 class="reveal">Map your next 90 days of <em class="serif">grid revenue.</em></h2>
+    <h2 class="reveal">Map your next 90 days <em class="serif">in the territory.</em></h2>
     <p class="lede reveal">Book a free 30-minute territory session. Leave with a signal map of your top accounts and three winnable plays — whether we work together or not.</p>
     <div class="cta-btns reveal">
-      <a class="btn btn-primary" href="mailto:aron@gridtechgtm.com?subject=Territory%20session%20%E2%80%94%2030%20min">Schedule a call</a>
+      <a class="btn btn-primary" href="mailto:aron@gridtechgtm.com?subject=Territory%20session%20%E2%80%94%2030%20min">Start the conversation</a>
       <a class="btn btn-secondary" href="https://www.linkedin.com/in/alazarchick/">LinkedIn</a>
     </div>
   </div>
@@ -1081,9 +1121,9 @@ footer { border-top: 1px solid var(--border); padding: clamp(40px, 5vw, 56px) 0;
       <div class="foot-col">
         <span class="h">Connect</span>
         <a href="https://www.linkedin.com/in/alazarchick/">LinkedIn</a>
-        <a href="#problem">The problem</a>
         <a href="#stack">Services</a>
         <a href="#track-record">Track record</a>
+        <a href="#engage">Ways to engage</a>
       </div>
     </div>
     <div class="foot-bottom">
